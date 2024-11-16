@@ -21,6 +21,9 @@ app.set("views", "./src/views");
 app.use(express.static(`${__dirname}/src/public`));
 
 // 라우팅
-app.use('/', index);
+//app.use('/', index);
+app.get('/', (req, res) => {
+ res.render('index');
+});
 
 module.exports = app;
